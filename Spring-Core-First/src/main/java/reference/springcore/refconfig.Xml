@@ -8,20 +8,19 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-<!-- this is our beans -->
-
-<bean class ="Spring_Core.Spring_Core_First.Student" name = "student1">
-
-<property name = "studentId" value = "22386"  />
-<property name="studentName" value = "saksham" />
-<property name="studentAddress" value = "Civil lines, Budaun" />
-
+<bean class = "reference.springcore.B"  name = "bref">
+    <property name="y" value = "90"/>
 </bean>
 
-<!-- this is our 2nd beans using p schema -->
 
-<bean class ="Spring_Core.Spring_Core_First.Student" name = "student2" p:studentId = "44675" p:studentName = "sambhav" p:studentAddress  = "Indrapuram, Ghaziabad" />
+<bean class = "reference.springcore.A"  name = "aref">
+        <property name="x" value = "88"/>
+        <property name="ob">
+            <ref bean = "bref"/>
+        
+        
+        </property>        
+</bean>	
 
 
-	
 </beans>

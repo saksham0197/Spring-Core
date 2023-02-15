@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+ <bean class = "Com.SpringCore.Collections.Emp" name = "emp1">
+    <property name="name" value = "Stuart" />
+    
+    <property name="phones">    
+        <list>
+             <value>978979986</value>
+             <value>8786976344</value>
+        </list>
+      </property>
+      
+    <property name="addresses">
+        <set>
+            <value>Indrapuram,Ghaziabad</value>
+            <value>Sector-62,Noida</value>
+            <value>Sikandra,Agra</value>
+        </set>    
+    </property> 
+    
+    <property name="courses">
+         <map>
+             <entry key = "java" value = "2Months"/>
+             <entry key = "MySql" value = "1Months"/>
+             <entry key = "AWS" value = "3Months"/> 
+         </map>
+    </property> 
+    
+    <property name="props">
+        <props>
+           <prop key="Name">Saksahm</prop>
+           <prop key="Designation">Developer</prop>
+                </props>
+    </property>
+  
+ </bean>
+	
+</beans>
